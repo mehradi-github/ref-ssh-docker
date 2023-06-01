@@ -15,10 +15,14 @@ EXPOSE 22
 
 CMD ["/usr/sbin/sshd","-D"]
 ```
-## ssh
+## Build image and Create Container
 ```sh
 docker build -t [IMAGE_NAME] .
 docker run -dit --name [Container Name] -p [PORT]:22 [IMAGE_NAME]
+
+```
+## ssh
+```sh
 ssh test@[ip_address of Docker Host OS] -p [PORT]
 
 ```
