@@ -25,6 +25,10 @@ docker run -dit --name [Container Name] -p [PORT]:22 [IMAGE_NAME]
 ```sh
 ssh-copy-id -p [PORT] test@[ip_address of Docker Host OS]
 ssh test@[ip_address of Docker Host OS] -p [PORT]
+usermod -aG sudo test
+sudo su
+echo "test  ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/test
+. ~/.bashrc
 ```
 ## Ansible
 ```yaml
