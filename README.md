@@ -23,10 +23,13 @@ docker run -dit --name [Container Name] -p [PORT]:22 [IMAGE_NAME]
 ```
 ## ssh
 ```sh
+ssh-copy-id -p [PORT] test@[ip_address of Docker Host OS]
 ssh test@[ip_address of Docker Host OS] -p [PORT]
-
 ```
 ## Ansible
+```sh
+
+```
 ```yaml
 - name: Change ssh port to [PORT]
   set_fact:
