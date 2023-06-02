@@ -27,11 +27,17 @@ ssh-copy-id -p [PORT] test@[ip_address of Docker Host OS]
 ssh test@[ip_address of Docker Host OS] -p [PORT]
 ```
 ## Ansible
-```sh
+```yaml
+# hosts
+[servers]
+IP_ADDRESS ansible_user=test ansible_port=PORT
 
 ```
-```yaml
+```sh
+ansible all -m ping
+```
+<!-- ```yaml
 - name: Change ssh port to [PORT]
   set_fact:
     ansible_port: [PORT]
-```
+``` -->
